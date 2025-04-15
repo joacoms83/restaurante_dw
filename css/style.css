@@ -1,0 +1,64 @@
+
+:root{
+    --header-background: rgb(182, 173, 144);
+    --color-section: rgb(166, 138, 100); 
+    --body-background:rgb(88, 47, 14);
+}
+
+body{
+    background-color: var(--body-background);
+    
+}
+
+header{
+    background-color: var(--header-background);
+}
+
+#nav_principal ul{ 
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around ;
+}
+
+.comidas{
+    background-color: var(--color-section);
+}
+
+a:link, a:visited {
+    color: rgb(230, 200, 122); 
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(245, 213, 108); 
+}
+
+.nav_header a:link, nav a:visited { 
+    color: rgb(127, 79, 36);
+    text-decoration: none;
+   
+}
+
+.nav_header a:hover{
+    color: var(--body-background);
+}
+  
+p{
+    color: rgb(101, 109, 74);
+    font-family: 'Lora', serif;
+    font-size:larger;
+}
+
+h1, h2, h3{
+    color:beige;
+    font-family: 'Playfair Display', serif;
+}
+
+section a:link, a:visited h3{
+    color: rgb(230, 200, 122); 
+    text-decoration: none;
+}
+
+section a:hover h3{
+    color: rgb(245, 213, 108);
+}
