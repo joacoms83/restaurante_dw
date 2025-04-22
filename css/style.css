@@ -12,16 +12,77 @@ body{
 
 header{
     background-color: var(--header-background);
+    position: fixed;
+    width: 100%;
+    top: 0;
 }
 
-#nav_principal ul{ 
+.nav_header nav ul{ 
     list-style-type: none;
     display: flex;
-    justify-content: space-around ;
+    justify-content: space-between ;
+    padding: 15px  ;
+   
 }
+
+main{
+    margin-top: 90px;
+}
+
+.sobre-nosotros{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
 
 .comidas{
     background-color: var(--color-section);
+    display:grid ;
+    justify-items: center;
+}
+
+.comidas-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+  
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 10px;
+    padding: 20px;
+}
+
+.footer div p {
+    margin: 2px ;
+
+}
+
+.footer div {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    align-self: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer nav {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    align-self: start;
+}
+
+.footer span{
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    justify-self: end;
+    text-align: right;
 }
 
 a:link, a:visited {
