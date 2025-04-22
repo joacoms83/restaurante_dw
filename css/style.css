@@ -21,7 +21,7 @@ header{
     list-style-type: none;
     display: flex;
     justify-content: space-between ;
-    padding: 15px  ;
+    padding: 15px;
    
 }
 
@@ -122,6 +122,47 @@ section a:link, a:visited h3{
 
 section a:hover h3{
     color: rgb(245, 213, 108);
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px 10px;
+        gap: 20px;
+    }
+
+    .footer nav {
+        order: 1;
+    }
+
+    .footer div {
+        order: 2;
+        align-items: center;
+    }
+
+    .footer span {
+        order: 3;
+        text-align: center;
+    }
+
+    header{
+        position: static;
+        width: 100%;
+        top: 0;
+    }
+
+    .nav_header nav ul{ 
+        padding: 25px;
+       
+    }
+
+    main{
+        margin-top: 10px;
+    }
+
 }
 
 @media screen and (max-width: 425px){
