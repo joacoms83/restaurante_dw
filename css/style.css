@@ -55,6 +55,10 @@ main{
     text-align: center;
 }
   
+#carouselExampleAutoplaying{
+    display: none;
+}
+
 .footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -208,7 +212,7 @@ section a:hover h3{
     }
     
     
-    .comidas {
+    #carouselExampleAutoplaying{
         background-color: var(--color-section);
         display: flex;
         flex-direction: column;
@@ -218,13 +222,23 @@ section a:hover h3{
         box-sizing: border-box;
     }
 
-    .comidas-item {
+    .carousel-item {
         width: 100%;
         max-width: 400px;
         padding-bottom: 20px;
     }
 
-    .comidas img {
+    .carouselExampleAutoplaying img {
+        width: 100%;
+        height: auto;
+    }
+
+    .comidas{
+        display: none;
+    }
+
+    #carouselExampleAutoplaying{
+        display: block;
         width: 100%;
         height: auto;
     }
