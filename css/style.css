@@ -17,12 +17,17 @@ header{
     top: 0;
 }
 
-.nav_header nav ul{ 
+/* .nav_header nav ul{ 
     list-style-type: none;
     display: flex;
     justify-content: space-between ;
     padding: 15px;
    
+} */
+
+.navbar{
+    background-color: var(--header-background);
+    
 }
 
 main{
@@ -102,6 +107,16 @@ a:hover {
 
 .nav_header a:hover{
     color: var(--body-background);
+}
+
+.footer nav a{
+    color: rgb(230, 200, 122); 
+    text-decoration: none;
+    
+}
+
+.footer nav a:hover{
+    color: rgb(245, 213, 108);
 }
   
 p{
