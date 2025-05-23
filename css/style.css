@@ -1,24 +1,28 @@
-
-:root{
+:root {
     --header-background: rgb(182, 173, 144);
-    --color-section: rgb(166, 138, 100); 
-    --body-background:rgb(88, 47, 14);
+    --color-section: rgb(166, 138, 100);
+    --body-background: rgb(88, 47, 14);
 }
 
-body{
+body {
     background-color: var(--body-background);
-    
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* asegura que el body ocupe toda la altura de la pantalla */
+    margin: 0;
 }
 
-main p{
+main p {
     max-width: 800px;
 }
 
-header{
+header {
     background-color: var(--header-background);
     position: fixed;
     width: 100%;
     top: 0;
+    z-index: 1000;
 }
 
 /* .nav_header nav ul{ 
@@ -29,41 +33,42 @@ header{
    
 } */
 
-.navbar{
+.navbar {
     background-color: var(--header-background);
-    
+
 }
 
-main{
+main {
     margin-top: 90px;
+    flex: 1;
 }
 
-.sobre-nosotros{
+.sobre-nosotros {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-image: url('../imagenes/restaurant.jpg'); 
+    background-image: url('../imagenes/restaurant.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     padding: 100px 20px;
-    color: rgb(245, 235, 215); 
-    
+    color: rgb(245, 235, 215);
+
 }
 
 
 .sobre-nosotros .contenido {
-  margin: 0 auto;
-  background-color: rgba(88, 47, 14, 0.7); /* Fondo marrón con transparencia */
-  padding: 20px;
-  border-radius: 10px;
+    margin: 0 auto;
+    background-color: rgba(88, 47, 14, 0.7);
+    padding: 20px;
+    border-radius: 10px;
 }
 
 
-.comidas{
+.comidas {
     background-color: var(--color-section);
-    display:grid ;
+    display: grid;
     justify-items: center;
 }
 
@@ -73,8 +78,8 @@ main{
     align-items: center;
     text-align: center;
 }
-  
-#carouselExampleAutoplaying{
+
+#carouselExampleAutoplaying {
     display: none;
 }
 
@@ -84,10 +89,12 @@ main{
     grid-template-rows: auto auto;
     gap: 10px;
     padding: 20px;
+    background-color: var(--header-background);
 }
 
 .footer div p {
-    margin: 2px ;
+    margin: 2px;
+    color: var(--body-background);
 
 }
 
@@ -106,62 +113,112 @@ main{
     align-self: start;
 }
 
-.footer span{
+.footer span {
     grid-column: 3 / 4;
     grid-row: 2 / 3;
     justify-self: end;
     text-align: right;
 }
 
-a:link, a:visited {
-    color: rgb(230, 200, 122); 
+a:link,
+a:visited {
+    color: rgb(230, 200, 122);
     text-decoration: none;
 }
 
 a:hover {
-    color: rgb(245, 213, 108); 
+    color: rgb(245, 213, 108);
 }
 
-.nav_header a:link, nav a:visited { 
+.nav_header a:link,
+nav a:visited {
     color: rgb(127, 79, 36);
     text-decoration: none;
-   
+
 }
 
-.nav_header a:hover{
+.nav_header a:hover {
     color: var(--body-background);
 }
 
-.footer nav a{
-    color: rgb(230, 200, 122); 
+.footer nav a {
+    color: rgb(230, 200, 122);
     text-decoration: none;
-    
+
 }
 
-.footer nav a:hover{
+.footer nav a:hover {
     color: rgb(245, 213, 108);
 }
-  
-p{
+
+p {
     color: rgb(245, 235, 215);
     font-family: 'Lora', serif;
-    font-size:larger;
+    font-size: larger;
 }
 
-h1, h2, h3{
-    color:beige;
+h1,
+h2,
+h3 {
+    color: beige;
     font-family: 'Playfair Display', serif;
     text-align: center;
 }
 
-section a:link, a:visited h3{
-    color: rgb(230, 200, 122); 
+section a:link,
+a:visited h3 {
+    color: rgb(230, 200, 122);
     text-decoration: none;
 }
 
-section a:hover h3{
+section a:hover h3 {
     color: rgb(245, 213, 108);
 }
+
+/*CONTACTO*/
+
+/* Estilo responsive del mapa */
+.mapa-responsive {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 20px auto;
+}
+
+.mapa-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    z-index: 1;
+}
+
+#contacto {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+#contacto h2,
+#contacto h3 {
+    margin-bottom: 15px;
+}
+
+#contacto textarea {
+    width: 100%;
+    max-width: 500px;
+    height: 100px;
+    margin-top: 10px;
+    padding: 10px;
+    resize: vertical;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
 
 @media screen and (max-width: 768px) {
     .footer {
@@ -187,24 +244,24 @@ section a:hover h3{
         text-align: center;
     }
 
-    header{
+    header {
         position: static;
         width: 100%;
         top: 0;
     }
 
-    .nav_header nav ul{ 
+    .nav_header nav ul {
         padding: 25px;
-       
+
     }
 
-    main{
+    main {
         margin-top: 10px;
     }
 
 }
 
-@media screen and (max-width: 425px){
+@media screen and (max-width: 425px) {
 
     .nav_header nav ul {
         flex-direction: column;
@@ -230,9 +287,9 @@ section a:hover h3{
         height: auto;
         max-width: 100%;
     }
-    
-    
-    #carouselExampleAutoplaying{
+
+
+    #carouselExampleAutoplaying {
         background-color: var(--color-section);
         display: flex;
         flex-direction: column;
@@ -253,21 +310,21 @@ section a:hover h3{
         height: auto;
     }
 
-    .comidas{
+    .comidas {
         display: none;
     }
 
-    #carouselExampleAutoplaying{
+    #carouselExampleAutoplaying {
         display: block;
         width: 100%;
         height: auto;
     }
-    
+
     .footer {
         display: none;
     }
 
-    header{
+    header {
         position: relative;
     }
 }
