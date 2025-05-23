@@ -1,0 +1,56 @@
+// Importás variables con un namespace, por ejemplo "vars"
+@use "base/variables" as vars;
+@use "components/carrousel";
+@use "layout/footer";
+@use "layout/header";
+@use "layout/main";
+@use "pages/contacto";
+@use "pages/inicio";
+
+
+body {
+    background-color: vars.$body-background;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.navbar {
+    background-color: vars.$header-background;
+}
+
+
+a:link,
+a:visited {
+    color: rgb(230, 200, 122);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(245, 213, 108);
+}
+
+.nav_header a:link,
+nav a:visited {
+    color: rgb(127, 79, 36);
+    text-decoration: none;
+}
+
+.nav_header a:hover {
+    color: vars.$body-background;
+}
+
+p {
+    color: rgb(245, 235, 215);
+    font-family: 'Lora', serif;
+    font-size: larger;
+}
+
+h1,
+h2,
+h3 {
+    color: beige;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+}

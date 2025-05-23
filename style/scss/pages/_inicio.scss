@@ -1,0 +1,43 @@
+.sobre-nosotros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-image: url('../imagenes/restaurant.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 20px;
+    color: rgb(245, 235, 215);
+
+    .contenido {
+        margin: 0 auto;
+        background-color: rgba(88, 47, 14, 0.7);
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+}
+
+.comidas {
+    background-color: $color-section;
+    display: grid;
+    justify-items: center;
+}
+
+.comidas-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+section a:link,
+a:visited h3 {
+    color: rgb(230, 200, 122);
+    text-decoration: none;
+
+    a:hover h3 {
+        color: rgb(245, 213, 108);
+    }
+}

@@ -1,0 +1,108 @@
+@media screen and (max-width: 768px) {
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px 10px;
+        gap: 20px;
+    }
+
+    .footer nav {
+        order: 1;
+    }
+
+    .footer div {
+        order: 2;
+        align-items: center;
+    }
+
+    .footer span {
+        order: 3;
+        text-align: center;
+    }
+
+    header {
+        position: static;
+        width: 100%;
+        top: 0;
+    }
+
+    .nav_header nav ul {
+        padding: 25px;
+
+    }
+
+    main {
+        margin-top: 10px;
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+
+    .nav_header nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 20px 0;
+        background-color: $header-background;
+    }
+
+    .nav_header nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .sobre-nosotros article {
+        max-width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .sobre-nosotros img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }
+
+
+    #carouselExampleAutoplaying {
+        background-color: $color-section;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .carousel-item {
+        width: 100%;
+        max-width: 400px;
+        padding-bottom: 20px;
+    }
+
+    .carouselExampleAutoplaying img {
+        width: 100%;
+        height: auto;
+    }
+
+    .comidas {
+        display: none;
+    }
+
+    #carouselExampleAutoplaying {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .footer {
+        display: none;
+    }
+
+    header {
+        position: relative;
+    }
+}
