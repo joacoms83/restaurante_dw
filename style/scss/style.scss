@@ -1,15 +1,19 @@
-// Importás variables con un namespace, por ejemplo "vars"
-@use "base/variables" as vars;
-@use "components/carrousel";
-@use "layout/footer";
-@use "layout/header";
-@use "layout/main";
-@use "pages/contacto";
-@use "pages/inicio";
+@use './layout/header';
+@use './layout/main';
+@use './layout/footer';
+@use './components/carrousel';
+@use './pages/inicio';
+@use './pages/menu';
+@use './pages/nosotros';
+@use './pages/contacto';
+@use './vendors/jquery';
 
+$header-background: rgb(182, 173, 144);
+$color-section: rgb(166, 138, 100);
+$body-background: rgb(88, 47, 14);
 
 body {
-    background-color: vars.$body-background;
+    background-color: $body-background;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -17,9 +21,9 @@ body {
 }
 
 .navbar {
-    background-color: vars.$header-background;
-}
+    background-color: $header-background;
 
+}
 
 a:link,
 a:visited {
@@ -35,16 +39,18 @@ a:hover {
 nav a:visited {
     color: rgb(127, 79, 36);
     text-decoration: none;
+
 }
 
 .nav_header a:hover {
-    color: vars.$body-background;
+    color: $body-background;
 }
 
 p {
     color: rgb(245, 235, 215);
     font-family: 'Lora', serif;
     font-size: larger;
+    
 }
 
 h1,
@@ -53,4 +59,14 @@ h3 {
     color: beige;
     font-family: 'Playfair Display', serif;
     text-align: center;
+}
+
+section a:link,
+a:visited h3 {
+    color: rgb(230, 200, 122);
+    text-decoration: none;
+}
+
+section a:hover h3 {
+    color: rgb(245, 213, 108);
 }

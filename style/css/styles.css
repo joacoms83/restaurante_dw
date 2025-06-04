@@ -1,18 +1,338 @@
-/* Error: Undefined variable.
- *   ,
- * 7 |     background-color: $header-background;
- *   |                       ^^^^^^^^^^^^^^^^^^
- *   '
- *   style\scss\layout\_footer.scss 7:23  @use
- *   style\scss\style.scss 4:1            root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a   \2577 \a 7 \2502      background-color: $header-background;\d\a   \2502                        ^^^^^^^^^^^^^^^^^^\a   \2575 \a   style\\scss\\layout\\_footer.scss 7:23  @use\a   style\\scss\\style.scss 4:1            root stylesheet";
+header {
+  background-color: rgb(182, 173, 144);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 }
+
+main {
+  margin-top: 90px;
+  flex: 1;
+}
+main p {
+  max-width: 800px;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 10px;
+  padding: 20px;
+  background-color: rgb(182, 173, 144);
+}
+.footer div {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  align-self: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.footer div p {
+  margin: 2px;
+  color: rgb(88, 47, 14);
+}
+.footer nav {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  align-self: start;
+}
+.footer nav a {
+  color: rgb(230, 200, 122);
+  text-decoration: none;
+}
+.footer nav nav a:hover {
+  color: rgb(245, 213, 108);
+}
+.footer span {
+  grid-column: 3/4;
+  grid-row: 2/3;
+  justify-self: end;
+  text-align: right;
+}
+
+#carouselExampleAutoplaying {
+  display: none;
+}
+
+.sobre-nosotros {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-image: url("/imagenes/restaurant.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 20px;
+  color: rgb(245, 235, 215);
+}
+.sobre-nosotros .contenido {
+  margin: 0 auto;
+  background-color: rgba(88, 47, 14, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.comidas {
+  background-color: rgb(166, 138, 100);
+  display: grid;
+  justify-items: center;
+}
+.comidas .comidas-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/*MENU*/
+#menu, #menu-sintacc, #menuvegano {
+  padding: 20px;
+  background-color: rgb(166, 138, 100);
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 1000px;
+  text-align: center;
+}
+
+#menu img, #menu-sintacc img, #menuvegano img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
+}
+
+#menu img:hover, #menu-sintacc img:hover, #menuvegano img:hover {
+  transform: scale(1.05);
+}
+
+#menu, #menu-sintacc, #menuvegano {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#menu img, #menu-sintacc img, #menuvegano img {
+  display: inline-block;
+}
+
+/*NOSOTROS*/
+.nuestra-historia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+.nuestra-historia p {
+  max-width: 800px;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+.imagenes-historia {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.imagenes-historia img {
+  max-width: 100%;
+  height: auto;
+  width: 300px;
+  border-radius: 8px;
+}
+
+/*CONTACTO*/
+/* Estilo responsive del mapa */
+.mapa-responsive {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 20px auto;
+}
+
+.mapa-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  z-index: 1;
+}
+
+#contacto {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+#contacto h2,
+#contacto h3 {
+  margin-bottom: 15px;
+}
+
+#contacto textarea {
+  width: 100%;
+  max-width: 500px;
+  height: 100px;
+  margin-top: 10px;
+  padding: 10px;
+  resize: vertical;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 10px;
+    gap: 20px;
+  }
+  .footer nav {
+    order: 1;
+  }
+  .footer div {
+    order: 2;
+    align-items: center;
+  }
+  .footer span {
+    order: 3;
+    text-align: center;
+  }
+  header {
+    position: static;
+    width: 100%;
+    top: 0;
+  }
+  .nav_header nav ul {
+    padding: 25px;
+  }
+  main {
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .nav_header nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0;
+    background-color: rgb(182, 173, 144);
+  }
+  .nav_header nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+  .sobre-nosotros article {
+    max-width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .sobre-nosotros img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+  #carouselExampleAutoplaying {
+    background-color: rgb(166, 138, 100);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .carousel-item {
+    width: 100%;
+    max-width: 400px;
+    padding-bottom: 20px;
+  }
+  .carouselExampleAutoplaying img {
+    width: 100%;
+    height: auto;
+  }
+  .comidas {
+    display: none;
+  }
+  #carouselExampleAutoplaying {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .footer {
+    display: none;
+  }
+  header {
+    position: relative;
+  }
+}
+body {
+  background-color: rgb(88, 47, 14);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.navbar {
+  background-color: rgb(182, 173, 144);
+}
+
+a:link,
+a:visited {
+  color: rgb(230, 200, 122);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(245, 213, 108);
+}
+
+.nav_header a:link,
+nav a:visited {
+  color: rgb(127, 79, 36);
+  text-decoration: none;
+}
+
+.nav_header a:hover {
+  color: rgb(88, 47, 14);
+}
+
+p {
+  color: rgb(245, 235, 215);
+  font-family: "Lora", serif;
+  font-size: larger;
+}
+
+h1,
+h2,
+h3 {
+  color: beige;
+  font-family: "Playfair Display", serif;
+  text-align: center;
+}
+
+section a:link,
+a:visited h3 {
+  color: rgb(230, 200, 122);
+  text-decoration: none;
+}
+
+section a:hover h3 {
+  color: rgb(245, 213, 108);
+}
+
+/*# sourceMappingURL=styles.css.map */

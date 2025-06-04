@@ -1,9 +1,13 @@
+$header-background: rgb(182, 173, 144);
+$color-section: rgb(166, 138, 100);
+$body-background: rgb(88, 47, 14);
+
 .sobre-nosotros {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-image: url('../imagenes/restaurant.jpg');
+    background-image: url('/imagenes/restaurant.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -17,27 +21,18 @@
         border-radius: 10px;
     }
 
+
 }
 
 .comidas {
     background-color: $color-section;
     display: grid;
     justify-items: center;
-}
 
-.comidas-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-section a:link,
-a:visited h3 {
-    color: rgb(230, 200, 122);
-    text-decoration: none;
-
-    a:hover h3 {
-        color: rgb(245, 213, 108);
+    .comidas-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 }
